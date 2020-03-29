@@ -136,3 +136,237 @@ nothing to commit, working tree clean
 (base) renato@LU19:~/Documentos/udemy_spark_basics$ git remote
 rep_udemy_pyspark_basics
 (base) renato@LU19:~/Documentos/udemy_spark_basics$ 
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git push rep_udemy_pyspark_basics master
+Username for 'https://github.com': renatocfreitas@gmail.com
+Password for 'https://renatocfreitas@gmail.com@github.com': 
+To https://github.com/renatocfreitas/udemy_pyspark_basics.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/renatocfreitas/udemy_pyspark_basics.git'
+hint: Updates were rejected because the tip of your current branch is behind                                            
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git branch -r
+  rep_udemy_pyspark_basics/master
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git pull rep_udemy_pyspark_basics master
+From https://github.com/renatocfreitas/udemy_pyspark_basics
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git clone rep_udemy_pyspark_basics
+fatal: repository 'rep_udemy_pyspark_basics' does not exist
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git pull --allow-unrelated-histories 
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=rep_udemy_pyspark_basics/<branch> master
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git pull rep_udemy_pyspark_basics master
+From https://github.com/renatocfreitas/udemy_pyspark_basics
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git pull --allow-unrelated-histories 
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=rep_udemy_pyspark_basics/<branch> master
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git pull --allow-unrelated-histories rep_udemy_pyspark_basics master
+From https://github.com/renatocfreitas/udemy_pyspark_basics
+ * branch            master     -> FETCH_HEAD
+Mesclagem automática de README.md
+CONFLITO (adicionar/adicionar): conflito de mesclagem em README.md
+Automatic merge failed; fix conflicts and then commit the result.
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git statsus
+git: 'statsus' não é um comando git. Veja 'git --help'.
+
+The most similar command is
+        status
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+Você tem caminhos não mesclados.
+  (fixar conflitos e executar "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Caminhos não mesclados:
+  (usar "git add <arquivo>..." para marcar resolução)
+
+        ambos adicionaram:   README.md
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (utilize "git checkout -- <arquivo>..." para descartar mudanças no diretório de trabalho)
+
+        modified:   Notes.txt
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git add Notes.txt 
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+Você tem caminhos não mesclados.
+  (fixar conflitos e executar "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Mudanças a serem submetidas:
+
+        modified:   Notes.txt
+
+Caminhos não mesclados:
+  (usar "git add <arquivo>..." para marcar resolução)
+
+        ambos adicionaram:   README.md
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ cat README.md 
+<<<<<<< HEAD
+# Udemy_PySpark
+=======
+# udemy_pyspark_basics
+Udemy Spark and Python for Big Data with PySpark Course - Instructor Jose Portilla
+### Install
+
+This project requires:
+
+- [Python 3](https://www.python.org/download/)
+- [Pandas](http://pandas.pydata.org/)
+- [Jupyter Notebook](https://jupyter.org/)
+
+### Code
+
+Jupyter source code:
+
+- 24_Spark_DataFrame_Basics.ipynb
+- 26_Spark_DataFrame_Basic_Operations.ipynb
+- 27_Spark_DataFrame_GroupBy_and_Aggregate_Functions.ipynb
+- 28_Spark_DataFrame_Missing_Data.ipynb
+- 29_Spark_DataFrame_Dates_Timestamps.ipynb
+
+Data sources:
+
+- /recursos/Spark_DataFrames/appl_stock.csv
+- /recursos/Spark_DataFrames/ContainsNull.csv
+- /recursos/Spark_DataFrames/people.json
+- /recursos/Spark_DataFrames/sales_info.csv
+
+### Running projects
+
+Run in the terminal in the directory containing the Jupyter files
+
+```bash
+jupyter notebook
+```
+and then select the ipynb file.
+>>>>>>> 912b8f929f6d0b9138ae91293fcc4d381111b950
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+Você tem caminhos não mesclados.
+  (fixar conflitos e executar "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Mudanças a serem submetidas:
+
+        modified:   Notes.txt
+
+Caminhos não mesclados:
+  (usar "git add <arquivo>..." para marcar resolução)
+
+        ambos adicionaram:   README.md
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git commit -m "merging README.md" 
+U       README.md
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git add README.md 
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+Todos os conflitos foram corrigidos mas você continua mesclando.
+  (use  "git commit" para concluir a mesclagem)
+
+Mudanças a serem submetidas:
+
+        modified:   Notes.txt
+        modified:   README.md
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ cat README.md 
+<<<<<<< HEAD
+# Udemy_PySpark
+=======
+# udemy_pyspark_basics
+Udemy Spark and Python for Big Data with PySpark Course - Instructor Jose Portilla
+### Install
+
+This project requires:
+
+- [Python 3](https://www.python.org/download/)
+- [Pandas](http://pandas.pydata.org/)
+- [Jupyter Notebook](https://jupyter.org/)
+
+### Code
+
+Jupyter source code:
+
+- 24_Spark_DataFrame_Basics.ipynb
+- 26_Spark_DataFrame_Basic_Operations.ipynb
+- 27_Spark_DataFrame_GroupBy_and_Aggregate_Functions.ipynb
+- 28_Spark_DataFrame_Missing_Data.ipynb
+- 29_Spark_DataFrame_Dates_Timestamps.ipynb
+
+Data sources:
+
+- /recursos/Spark_DataFrames/appl_stock.csv
+- /recursos/Spark_DataFrames/ContainsNull.csv
+- /recursos/Spark_DataFrames/people.json
+- /recursos/Spark_DataFrames/sales_info.csv
+
+### Running projects
+
+Run in the terminal in the directory containing the Jupyter files
+
+```bash
+jupyter notebook
+```
+and then select the ipynb file.
+>>>>>>> 912b8f929f6d0b9138ae91293fcc4d381111b950
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+Todos os conflitos foram corrigidos mas você continua mesclando.
+  (use  "git commit" para concluir a mesclagem)
+
+Mudanças a serem submetidas:
+
+        modified:   Notes.txt
+        modified:   README.md
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git commit -m "README.md from github" 
+[master 0de2524] README.md from github
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git statsu
+git: 'statsu' não é um comando git. Veja 'git --help'.
+
+The most similar command is
+        status
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+nothing to commit, working tree clean
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git push rep_udemy_pyspark_basics master
+Username for 'https://github.com': renatocfreitas@gmail.com
+Password for 'https://renatocfreitas@gmail.com@github.com': 
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (33/33), 83.10 KiB | 5.54 MiB/s, done.
+Total 33 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas: 100% (15/15), completed with 1 local object.
+To https://github.com/renatocfreitas/udemy_pyspark_basics.git
+   912b8f9..0de2524  master -> master
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ 
