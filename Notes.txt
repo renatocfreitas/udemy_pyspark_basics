@@ -108,3 +108,31 @@ Date:   Sun Mar 29 20:07:52 2020 -0300
 
     First commit
 (base) renato@LU19:~/Documentos/udemy_spark_basics$ 
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+
+        Notes.txt
+
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git add Notes.txt 
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+Mudanças a serem submetidas:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Notes.txt
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git commit -m "Adding Notes.txt"
+[master bb5f7c0] Adding Notes.txt
+ 1 file changed, 110 insertions(+)
+ create mode 100644 Notes.txt
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+nothing to commit, working tree clean
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ 
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git remote add rep_udemy_pyspark_basics https://github.com/renatocfreitas/udemy_pyspark_basics.git
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git remote
+rep_udemy_pyspark_basics
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ 
