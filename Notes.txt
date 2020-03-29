@@ -1,0 +1,110 @@
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ pwd
+/home/renato/Documentos/udemy_spark_basics
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ ls -lh
+total 136K
+-rw-rw-r-- 1 renato renato  40K mar 29 19:26 24_Spark_DataFrame_Basics.ipynb
+-rw-rw-r-- 1 renato renato  33K mar 29 18:06 26_Spark_DataFrame_Basic_Operations.ipynb
+-rw-rw-r-- 1 renato renato  13K mar 29 18:07 27_Spark_DataFrame_GroupBy_and_Aggregate_Functions.ipynb
+-rw-rw-r-- 1 renato renato  11K mar 29 18:09 28_Spark_DataFrame_Missing_Data.ipynb
+-rw-rw-r-- 1 renato renato  13K mar 29 18:09 29_Spark_DataFrame_Dates_Timestamps.ipynb
+-rw-rw-r-- 1 renato renato 7,9K fev  4 20:26 Python_Crash_Course_Part_3.ipynb
+-rw-rw-r-- 1 renato renato   16 mar 29 18:15 README.md
+drwxrwxr-x 3 renato renato 4,0K mar 29 19:21 recursos
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ cat README.md 
+# Udemy_PySpark
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+fatal: not a git repository (or any of the parent directories): .git
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git init
+Initialized empty Git repository in /home/renato/Documentos/udemy_spark_basics/.git/
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+
+No commits yet
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+
+        .ipynb_checkpoints/
+        24_Spark_DataFrame_Basics.ipynb
+        26_Spark_DataFrame_Basic_Operations.ipynb
+        27_Spark_DataFrame_GroupBy_and_Aggregate_Functions.ipynb
+        28_Spark_DataFrame_Missing_Data.ipynb
+        29_Spark_DataFrame_Dates_Timestamps.ipynb
+        Python_Crash_Course_Part_3.ipynb
+        README.md
+        recursos/
+
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git add .
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+
+No commits yet
+
+Mudanças a serem submetidas:
+  (utilize "git rm --cached <arquivo>..." para não apresentar)
+
+        new file:   .ipynb_checkpoints/24_Spark_DataFrame_Basics-checkpoint.ipynb
+        new file:   24_Spark_DataFrame_Basics.ipynb
+        new file:   26_Spark_DataFrame_Basic_Operations.ipynb
+        new file:   27_Spark_DataFrame_GroupBy_and_Aggregate_Functions.ipynb
+        new file:   28_Spark_DataFrame_Missing_Data.ipynb
+        new file:   29_Spark_DataFrame_Dates_Timestamps.ipynb
+        new file:   Python_Crash_Course_Part_3.ipynb
+        new file:   README.md
+        new file:   recursos/README.md
+        new file:   recursos/Spark_DataFrames/.ipynb_checkpoints/DataFrame_Basic_Operations-checkpoint.ipynb
+        new file:   recursos/Spark_DataFrames/.ipynb_checkpoints/DataFrame_Basics-checkpoint.ipynb
+        new file:   recursos/Spark_DataFrames/.ipynb_checkpoints/Dates_and_Timestamps-checkpoint.ipynb
+        new file:   recursos/Spark_DataFrames/.ipynb_checkpoints/GroupBy_and_Aggregate_Functions-checkpoint.ipynb
+        new file:   recursos/Spark_DataFrames/.ipynb_checkpoints/Missing_Data-checkpoint.ipynb
+        new file:   recursos/Spark_DataFrames/.ipynb_checkpoints/Spark DataFrames Project Exercise - SOLUTIONS-checkpoint.ipynb                                                                                                                 
+        new file:   recursos/Spark_DataFrames/.ipynb_checkpoints/Spark DataFrames Project Exercise-checkpoint.ipynb
+        new file:   recursos/Spark_DataFrames/ContainsNull.csv
+        new file:   recursos/Spark_DataFrames/DataFrame_Basic_Operations.ipynb
+        new file:   recursos/Spark_DataFrames/DataFrame_Basics.ipynb
+        new file:   recursos/Spark_DataFrames/Dates_and_Timestamps.ipynb
+        new file:   recursos/Spark_DataFrames/GroupBy_and_Aggregate_Functions.ipynb
+        new file:   recursos/Spark_DataFrames/Missing_Data.ipynb
+        new file:   recursos/Spark_DataFrames/appl_stock.csv
+        new file:   recursos/Spark_DataFrames/people.json
+        new file:   recursos/Spark_DataFrames/sales_info.csv
+
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git commit -m "First commit"
+[master (root-commit) 97206fb] First commit
+ 25 files changed, 13674 insertions(+)
+ create mode 100644 .ipynb_checkpoints/24_Spark_DataFrame_Basics-checkpoint.ipynb
+ create mode 100644 24_Spark_DataFrame_Basics.ipynb
+ create mode 100644 26_Spark_DataFrame_Basic_Operations.ipynb
+ create mode 100644 27_Spark_DataFrame_GroupBy_and_Aggregate_Functions.ipynb
+ create mode 100644 28_Spark_DataFrame_Missing_Data.ipynb
+ create mode 100644 29_Spark_DataFrame_Dates_Timestamps.ipynb
+ create mode 100644 Python_Crash_Course_Part_3.ipynb
+ create mode 100644 README.md
+ create mode 100644 recursos/README.md
+ create mode 100644 recursos/Spark_DataFrames/.ipynb_checkpoints/DataFrame_Basic_Operations-checkpoint.ipynb
+ create mode 100644 recursos/Spark_DataFrames/.ipynb_checkpoints/DataFrame_Basics-checkpoint.ipynb
+ create mode 100644 recursos/Spark_DataFrames/.ipynb_checkpoints/Dates_and_Timestamps-checkpoint.ipynb
+ create mode 100644 recursos/Spark_DataFrames/.ipynb_checkpoints/GroupBy_and_Aggregate_Functions-checkpoint.ipynb
+ create mode 100644 recursos/Spark_DataFrames/.ipynb_checkpoints/Missing_Data-checkpoint.ipynb
+ create mode 100644 recursos/Spark_DataFrames/.ipynb_checkpoints/Spark DataFrames Project Exercise - SOLUTIONS-checkpoint.ipynb
+ create mode 100644 recursos/Spark_DataFrames/.ipynb_checkpoints/Spark DataFrames Project Exercise-checkpoint.ipynb
+ create mode 100644 recursos/Spark_DataFrames/ContainsNull.csv
+ create mode 100644 recursos/Spark_DataFrames/DataFrame_Basic_Operations.ipynb
+ create mode 100644 recursos/Spark_DataFrames/DataFrame_Basics.ipynb
+ create mode 100644 recursos/Spark_DataFrames/Dates_and_Timestamps.ipynb
+ create mode 100644 recursos/Spark_DataFrames/GroupBy_and_Aggregate_Functions.ipynb
+ create mode 100644 recursos/Spark_DataFrames/Missing_Data.ipynb
+ create mode 100644 recursos/Spark_DataFrames/appl_stock.csv
+ create mode 100644 recursos/Spark_DataFrames/people.json
+ create mode 100644 recursos/Spark_DataFrames/sales_info.csv
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git status
+No ramo master
+nothing to commit, working tree clean
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ git log
+commit 97206fbde375f7af570394a8037d6a1d8ee347d5 (HEAD -> master)
+Author: Renato Freitas <renatocfreitas@gmail.com>
+Date:   Sun Mar 29 20:07:52 2020 -0300
+
+    First commit
+(base) renato@LU19:~/Documentos/udemy_spark_basics$ 
