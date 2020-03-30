@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# Udemy_PySpark
-=======
+
 # udemy_pyspark_basics
 Udemy Spark and Python for Big Data with PySpark Course - Instructor Jose Portilla
 ### Install
@@ -36,4 +34,4 @@ Run in the terminal in the directory containing the Jupyter files
 jupyter notebook
 ```
 and then select the ipynb file.
->>>>>>> 912b8f929f6d0b9138ae91293fcc4d381111b950
+
